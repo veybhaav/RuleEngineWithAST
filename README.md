@@ -51,37 +51,42 @@ To get started, make sure you have:
 ```bash
 git clone https://github.com/your_username/RuleEngineWithAST.git
 cd RuleEngineWithAST
+```
 
+```
 Step 2: Install Dependencies
 Install the necessary packages using pip:
+```
 
-
+```
 pip install -r requirements.txt
 Usage
 Running Locally
 To run the rule engine, execute:
-
-
+```
+```
 python rule_engine.py
 Docker Setup (Optional)
 A Dockerfile is provided for containerized setup, along with a docker-compose.yml file for easier deployment.
-
+```
+```
 Build and Run with Docker Compose
 
 docker-compose up --build
 Example Workflow
 Define a Rule: Create a rule string to define eligibility criteria, such as:
 
-
+```
 rule_string = "((age > 30 AND department == 'Sales') OR (age < 25 AND department == 'Marketing')) AND (salary > 50000 OR experience > 5)"
 Generate AST: Convert the rule string into an AST representation:
 
-
+```
 rule_ast = create_rule(rule_string)
 Evaluate Rule: Apply the rule to a user’s data (provided as JSON):
 
-
+```
 data = { "age": 32, "department": "Sales", "salary": 55000, "experience": 4 }
 result = evaluate_rule(rule_ast, data)
 print(result)  # True or False based on evaluation
 Combine Multiple Rules: Use the combine_rules() function to merge multiple rules if needed, creating a more complex AST.
+```
